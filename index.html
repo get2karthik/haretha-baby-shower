@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haretha's Baby Shower - E-Invite</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            script: ['"Great Vibes"', 'cursive'],
+            display: ['"Cinzel"', 'serif'],
+            sans: ['"Inter"', 'sans-serif'],
+          },
+          colors: {
+            cream: '#FDFBF7',
+            gold: {
+              light: '#F3E5AB',
+              DEFAULT: '#C59B27',
+              dark: '#9A7418',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background: radial-gradient(circle at top, #fffdf9 0%, #f5efe2 100%);
+      overflow-x: hidden;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #9A7418 0%, #D4AF37 50%, #9A7418 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .sparkle {
+      position: absolute;
+      pointer-events: none;
+      animation: floatSparkle 4s ease-in-out infinite;
+    }
+    @keyframes floatSparkle {
+      0%, 100% { transform: translateY(0px) scale(1); opacity: 0.7; }
+      50% { transform: translateY(-8px) scale(1.15); opacity: 1; }
+    }
+    .baby-float {
+      position: absolute;
+      pointer-events: none;
+      z-index: 20;
+      animation: babyFloat 4.5s ease-in-out infinite;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.06));
+      user-select: none;
+    }
+    .baby-sway {
+      position: absolute;
+      pointer-events: none;
+      z-index: 20;
+      animation: babySway 3.8s ease-in-out infinite;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.06));
+      user-select: none;
+    }
+    @keyframes babyFloat {
+      0%, 100% { transform: translateY(0px) rotate(-6deg) scale(1); }
+      50% { transform: translateY(-9px) rotate(8deg) scale(1.08); }
+    }
+    @keyframes babySway {
+      0%, 100% { transform: rotate(-10deg) scale(0.96); }
+      50% { transform: rotate(10deg) scale(1.06); }
+    }
+    .card-enter {
+      animation: cardEnter 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    @keyframes cardEnter {
+      0% { opacity: 0; transform: translateY(40px) scale(0.96); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .fade-up {
+      animation: fadeUp 0.8s ease-out forwards;
+      opacity: 0;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .soft-glow {
+      box-shadow: 0 10px 40px rgba(197, 155, 39, 0.12), 0 2px 8px rgba(0,0,0,0.06);
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-800 antialiased py-6 px-3 sm:px-6 flex justify-center items-start min-h-screen">
+
+  <!-- Main E-Invite Card -->
+  <main class="relative w-full max-w-md bg-cream border-2 border-[#E6D5B8] rounded-3xl soft-glow overflow-hidden card-enter">
+
+    <!-- Floating Baby Icons -->
+    <div aria-hidden="true" class="absolute inset-0 overflow-hidden pointer-events-none z-20">
+      <span class="baby-float text-base top-4 left-5 opacity-80" style="animation-delay: 0.1s;">🍼</span>
+      <span class="baby-sway text-sm top-6 right-6 opacity-80" style="animation-delay: 0.8s;">👶</span>
+      <span class="baby-float text-xs top-20 left-4 opacity-75" style="animation-delay: 1.5s;">👣</span>
+      <span class="baby-sway text-base top-24 right-5 opacity-80" style="animation-delay: 2.2s;">🧸</span>
+      <span class="baby-float text-sm top-36 left-8 opacity-70" style="animation-delay: 0.6s;">🧷</span>
+      <span class="baby-sway text-xs top-40 right-8 opacity-75" style="animation-delay: 1.9s;">🐣</span>
+      <span class="baby-float text-sm top-[280px] left-3 opacity-75" style="animation-delay: 1.1s;">🍼</span>
+      <span class="baby-sway text-sm top-[300px] right-3 opacity-75" style="animation-delay: 0.4s;">👣</span>
+      <span class="baby-float text-base top-[480px] left-3 opacity-80" style="animation-delay: 2.5s;">👶</span>
+      <span class="baby-sway text-sm top-[500px] right-3 opacity-75" style="animation-delay: 1.3s;">🧸</span>
+      <span class="baby-float text-sm bottom-32 left-4 opacity-75" style="animation-delay: 0.5s;">🐣</span>
+      <span class="baby-sway text-sm bottom-28 right-4 opacity-75" style="animation-delay: 1.8s;">🧷</span>
+      <span class="baby-float text-base bottom-8 left-7 opacity-80" style="animation-delay: 1.2s;">👣</span>
+      <span class="baby-sway text-base bottom-8 right-7 opacity-80" style="animation-delay: 2.4s;">🍼</span>
+    </div>
+
+    <!-- Header -->
+    <div class="relative pt-10 pb-6 px-6 text-center bg-gradient-to-b from-[#FAF3E3] via-[#FDFBF7] to-transparent z-10">
+      <svg class="sparkle w-5 h-5 text-amber-400 top-8 left-14" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/>
+      </svg>
+      <svg class="sparkle w-4 h-4 text-rose-300 top-16 right-14" style="animation-delay: 1.2s;" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/>
+      </svg>
+      <svg class="sparkle w-3 h-3 text-amber-300 top-12 left-1/2 -translate-x-1/2" style="animation-delay: 0.6s;" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/>
+      </svg>
+
+      <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-50 border border-amber-200 text-gold mb-3 shadow-sm">
+        <i class="fa-solid fa-baby-carriage text-2xl"></i>
+      </div>
+
+      <p class="text-xs sm:text-sm uppercase tracking-widest text-amber-800/80 font-medium mb-2 fade-up" style="animation-delay: 0.2s;">
+        You are joyfully invited for
+      </p>
+
+      <h1 class="font-script text-6xl sm:text-7xl text-gold py-1 leading-tight drop-shadow-sm fade-up" style="animation-delay: 0.35s;">
+        Haretha's
+      </h1>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold tracking-[0.2em] gold-gradient-text -mt-1 fade-up" style="animation-delay: 0.5s;">
+        BABY SHOWER
+      </h2>
+
+      <div class="flex items-center justify-center gap-3 mt-4 fade-up" style="animation-delay: 0.65s;">
+        <span class="h-[1px] w-16 bg-gradient-to-r from-transparent to-amber-400"></span>
+        <i class="fa-solid fa-wand-magic-sparkles text-xs text-amber-500"></i>
+        <span class="h-[1px] w-16 bg-gradient-to-l from-transparent to-amber-400"></span>
+      </div>
+    </div>
+
+    <div class="relative z-10 px-5 pb-10 space-y-6">
+
+      <!-- Date & Countdown -->
+      <section class="bg-white rounded-2xl p-6 border border-[#E8DFCA] shadow-sm text-center relative overflow-hidden fade-up" style="animation-delay: 0.8s;">
+        <span class="absolute top-4 left-4 text-sm opacity-70">👶</span>
+        <span class="absolute top-4 right-4 text-sm opacity-70">🧷</span>
+
+        <div class="inline-flex items-center justify-center gap-2 text-amber-700 font-semibold text-xs uppercase tracking-widest mb-2">
+          <i class="fa-regular fa-calendar-check"></i> Save The Date
+        </div>
+
+        <p class="text-3xl font-bold text-slate-900 tracking-tight">November 15, 2026</p>
+        <p class="text-sm font-medium text-amber-700 mt-1">Sunday</p>
+
+        <div class="flex flex-wrap items-center justify-center gap-2 mt-3 text-sm text-slate-600 font-medium">
+          <span class="inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200/70 px-3.5 py-1.5 rounded-full text-amber-900">
+            <i class="fa-regular fa-clock text-amber-600"></i> 4:30 PM – 6:30 PM
+          </span>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-dashed border-amber-200 flex items-center justify-center gap-2 text-amber-800 font-semibold text-sm">
+          <i class="fa-solid fa-utensils text-amber-600"></i>
+          <span>Dinner served by 6:30 PM</span>
+        </div>
+
+        <!-- Countdown -->
+        <div class="mt-5 pt-4 border-t border-slate-100">
+          <p class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold mb-3">Countdown to Celebration</p>
+          <div class="grid grid-cols-4 gap-2.5 text-center" id="countdownBox">
+            <div class="bg-[#FAF6EE] rounded-xl py-2.5 border border-amber-100">
+              <span id="cd-days" class="block text-xl font-bold text-slate-800">00</span>
+              <span class="text-[10px] uppercase text-slate-500 font-medium">Days</span>
+            </div>
+            <div class="bg-[#FAF6EE] rounded-xl py-2.5 border border-amber-100">
+              <span id="cd-hours" class="block text-xl font-bold text-slate-800">00</span>
+              <span class="text-[10px] uppercase text-slate-500 font-medium">Hours</span>
+            </div>
+            <div class="bg-[#FAF6EE] rounded-xl py-2.5 border border-amber-100">
+              <span id="cd-mins" class="block text-xl font-bold text-slate-800">00</span>
+              <span class="text-[10px] uppercase text-slate-500 font-medium">Mins</span>
+            </div>
+            <div class="bg-[#FAF6EE] rounded-xl py-2.5 border border-amber-100">
+              <span id="cd-secs" class="block text-xl font-bold text-amber-700">00</span>
+              <span class="text-[10px] uppercase text-slate-500 font-medium">Secs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Haretha%27s+Baby+Shower&dates=20261115T110000Z/20261115T130000Z&details=You+are+joyfully+invited+to+celebrate+Haretha%27s+Baby+Shower!+Dinner+to+be+served+by+6:30+PM.&location=Citadines+OMR+Chennai,+Sholinganallur,+Chennai"
+             target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-amber-700 hover:text-amber-900 py-2 px-4 rounded-lg hover:bg-amber-50 transition">
+            <i class="fa-regular fa-calendar-plus"></i> Add to Google Calendar
+          </a>
+        </div>
+      </section>
+
+      <!-- Venue -->
+      <section class="bg-white rounded-2xl border border-[#E8DFCA] shadow-sm overflow-hidden fade-up" style="animation-delay: 1s;">
+        <div class="bg-gradient-to-r from-[#FAF3E3] via-[#FDFBF7] to-[#FAF3E3] px-4 py-3.5 border-b border-[#E8DFCA] flex items-center justify-between">
+          <div class="flex items-center gap-2.5 text-left">
+            <span class="w-8 h-8 rounded-full bg-amber-100 border border-amber-300 text-amber-800 flex items-center justify-center text-sm shadow-sm">
+              <i class="fa-solid fa-hotel"></i>
+            </span>
+            <div>
+              <span class="block text-[10px] font-bold uppercase tracking-widest text-amber-800">Venue</span>
+              <h3 class="text-sm font-bold text-slate-900 leading-tight">Citadines Apart'hotel</h3>
+            </div>
+          </div>
+          <span class="text-[10px] font-semibold bg-amber-50 text-amber-900 border border-amber-200 px-2.5 py-1 rounded-full">
+            <i class="fa-solid fa-camera text-amber-600 mr-1"></i>Front View
+          </span>
+        </div>
+
+        <div class="relative w-full bg-slate-900 overflow-hidden">
+          <img
+            src="https://gos3.ibcdn.com/93e96858628811e986be0242ac110002.jpg"
+            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1000&q=85';"
+            alt="Citadines Apart'hotel OMR Chennai Front Exterior"
+            class="w-full h-auto block object-contain"
+          />
+        </div>
+
+        <div class="bg-[#FAF6EE] px-4 py-2.5 border-b border-[#E8DFCA] flex items-center justify-between text-[11px] text-amber-900">
+          <span class="font-medium flex items-center gap-1.5">
+            <i class="fa-solid fa-building-circle-check text-amber-600"></i>
+            Citadines Apart'hotel — OMR
+          </span>
+          <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-500">Sholinganallur</span>
+        </div>
+
+        <div class="p-4 space-y-4">
+          <div class="flex items-start gap-3 text-left">
+            <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-slate-800">Citadines OMR Chennai</p>
+              <p class="text-xs text-slate-600 mt-0.5">
+                No. 290, Rajiv Gandhi Salai (OMR), Sholinganallur, Chennai, Tamil Nadu - 600119
+              </p>
+            </div>
+          </div>
+
+          <div class="rounded-xl overflow-hidden border border-slate-200 h-44 w-full bg-slate-100 relative shadow-inner">
+            <iframe
+              title="Citadines OMR Chennai Map"
+              width="100%" height="100%" style="border:0" loading="lazy" allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Citadines%20OMR%20Chennai%20Sholinganallur&t=&z=15&ie=UTF8&iwloc=&output=embed">
+            </iframe>
+          </div>
+
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Citadines+OMR+Chennai+Sholinganallur"
+             target="_blank" rel="noopener noreferrer"
+             class="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl bg-[#1A73E8] hover:bg-[#1558B0] text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all">
+            <i class="fa-solid fa-diamond-turn-right text-base"></i>
+            <span>Get Directions on Google Maps</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="text-center pt-2 fade-up" style="animation-delay: 1.2s;">
+        <p class="font-script text-3xl text-amber-700">With Love, Family & Friends</p>
+        <p class="text-[11px] text-slate-400 mt-1">We can't wait to welcome you on Nov 15, 2026!</p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script>
+    // Countdown to November 15, 2026 at 4:30 PM IST
+    function updateCountdown() {
+      const eventDate = new Date("2026-11-15T16:30:00+05:30").getTime();
+      const now = new Date().getTime();
+      const diff = eventDate - now;
+
+      if (diff <= 0) {
+        ["cd-days","cd-hours","cd-mins","cd-secs"].forEach(id => {
+          document.getElementById(id).textContent = "00";
+        });
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+      document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
