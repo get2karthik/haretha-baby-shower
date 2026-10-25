@@ -31,6 +31,22 @@
   </script>
 
   <style>
+    @media print {
+      body { 
+        background: white !important; 
+        padding: 0 !important; 
+        margin: 0 !important;
+      }
+      main { 
+        box-shadow: none !important; 
+        border: none !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+      }
+    }
+  </style>
     body {
       background: radial-gradient(circle at top, #F5F3FF 0%, #ECFDF5 50%, #FEFCE8 100%);
       overflow-x: hidden;
@@ -56,6 +72,7 @@
       animation: babyFloat 4.5s ease-in-out infinite;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.06));
       user-select: none;
+      font-size: 2.2em;
     }
     .baby-sway {
       position: absolute;
@@ -64,6 +81,7 @@
       animation: babySway 3.8s ease-in-out infinite;
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.06));
       user-select: none;
+      font-size: 2.2em;
     }
     @keyframes babyFloat {
       0%, 100% { transform: translateY(0px) rotate(-6deg) scale(1); }
@@ -90,6 +108,26 @@
     }
     .soft-glow {
       box-shadow: 0 10px 40px rgba(167, 139, 250, 0.18), 0 2px 8px rgba(0,0,0,0.04);
+    }
+    @media print {
+      @page { 
+        size: 480px 1100px; 
+        margin: 0; 
+      }
+      html, body { 
+        background: white !important; 
+        padding: 0 !important; 
+        margin: 0 !important;
+        width: 480px !important;
+      }
+      main { 
+        box-shadow: none !important; 
+        border: none !important;
+        max-width: 480px !important;
+        width: 480px !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+      }
     }
   </style>
 </head>
@@ -128,8 +166,8 @@
         <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/>
       </svg>
 
-      <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-purple-50 border border-purple-200 text-purple-500 mb-3 shadow-sm">
-        <i class="fa-solid fa-baby-carriage text-2xl"></i>
+      <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-purple-50 border-2 border-purple-200 text-purple-500 mb-3 shadow-sm">
+        <i class="fa-solid fa-baby-carriage text-4xl"></i>
       </div>
 
       <p class="text-xs sm:text-sm uppercase tracking-widest text-purple-700/80 font-medium mb-2 fade-up" style="animation-delay: 0.2s;">
